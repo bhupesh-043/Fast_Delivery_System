@@ -1,10 +1,3 @@
-"""
-Runs delivery_system.py against every JSON file in test_cases/ (the files
-provided with the assignment) and writes each report to reports/.
-Prints a one-line summary per test case so you can eyeball that everything
-ran without errors and that all packages were accounted for.
-"""
-
 import json
 import os
 
