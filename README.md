@@ -6,36 +6,33 @@ package to the nearest agent, simulates the day's deliveries, and writes
 a report showing packages delivered, distance traveled, and the most
 efficient agent.
 
-## Project layout
+Project layout
 
-```
 delivery_system.py   Core logic (all 5 required tasks + bonus features)
 run_all_tests.py      Runs the simulator against every file in test_cases/
 data.json              Sample input straight from the assignment PDF
 test_cases/            The 10 test cases + base_case.json provided with the assignment
 reports/                Output of run_all_tests.py (one report per test case)
 report.json             Output of the last delivery_system.py run
-```
 
 ## Usage
 
-```bash
-# Run on the default data.json, writes report.json
+Run on the default data.json, writes report.json
 python delivery_system.py
 
-# Run on a specific input file, choose the output path
+Run on a specific input file, choose the output path
 python delivery_system.py test_cases/test_case_3.json -o my_report.json
 
-# Run every provided test case at once
+Run every provided test case at once
 python run_all_tests.py
 
-# Bonus features (all optional, off by default)
+Bonus features (all optional, off by default)
 python delivery_system.py --ascii-map                     # ASCII route map
 python delivery_system.py --export-csv                    # top_performer.csv
 python delivery_system.py --delay-probability 0.3 --seed 42  # random delays
-```
 
-## How it works
+
+How it works
 
 1. **Load & parse (`load_data`)** — reads the JSON file with the standard
    `json` module. Two input schemas show up across the provided files
@@ -81,7 +78,7 @@ total delivered must equal the total package count.
 
 ## Testing
 
-`run_all_tests.py` runs the simulator against all 11 provided input files
-(`base_case.json` + `test_case_1.json`–`test_case_10.json`) and prints a
+run_all_tests.py runs the simulator against all 11 provided input files
+(base_case.json + `test_case_1.json`–`test_case_10.json`) and prints a
 pass/fail line per file, checking that every package in the input ends
 up delivered. All 11 currently pass.
